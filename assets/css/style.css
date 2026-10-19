@@ -1,0 +1,173 @@
+/* Ametista Seeds — estilo do site */
+@font-face{font-family:"Marcellus";src:url(../fonts/Marcellus-latin.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Ametista Texto";src:url(../fonts/AmetistaTexto-Light.woff) format("woff");font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:"Ametista Texto";src:url(../fonts/AmetistaTexto-Regular.woff) format("woff");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Ametista Texto";src:url(../fonts/AmetistaTexto-Italic.woff) format("woff");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Ametista Texto";src:url(../fonts/AmetistaTexto-Semibold.woff) format("woff");font-weight:600;font-style:normal;font-display:swap}
+
+:root{
+  --fundo:#f7f5f9;
+  --papel:#ffffff;
+  --tinta:#2a2530;
+  --suave:#5d5866;
+  --ametista:#7a5da0;
+  --ametista-escura:#5b4380;
+  --ametista-nevoa:#ece6f3;
+  --verde:#3a6b45;
+  --verde-claro:#8bc097;
+  --prata:#616870;
+  --prata-clara:#c6cacf;
+  --linha:#dcd8e2;
+  --titulo:"Marcellus",Georgia,"Times New Roman",serif;
+  --texto:"Ametista Texto","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --largura:68rem;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--fundo);color:var(--tinta);font-family:var(--texto);font-weight:400;font-size:1.0625rem;line-height:1.7;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img,video,svg{display:block;max-width:100%}
+a{color:var(--ametista-escura);text-decoration-thickness:1px;text-underline-offset:.2em}
+a:hover{color:var(--verde)}
+:focus-visible{outline:2px solid var(--ametista);outline-offset:3px;border-radius:4px}
+.envolve{width:100%;max-width:var(--largura);margin:0 auto;padding:0 1.25rem}
+.so-leitor{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* Cabeçalho */
+.topo{position:sticky;top:0;z-index:10;background:rgba(247,245,249,.88);backdrop-filter:saturate(1.2) blur(10px);-webkit-backdrop-filter:saturate(1.2) blur(10px);border-bottom:1px solid transparent;transition:border-color .3s}
+.topo.rolou{border-bottom-color:var(--linha)}
+.topo .envolve{display:flex;align-items:center;gap:1.5rem;min-height:4.25rem}
+.marca{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;margin-right:auto}
+.marca img{width:1.9rem;height:auto}
+.nome{font-family:var(--titulo);letter-spacing:.2em;font-size:.95rem;white-space:nowrap}
+.nome .am{color:var(--ametista)}
+.nome .sd{color:var(--verde)}
+.menu{display:flex;gap:1.4rem;list-style:none;margin:0;padding:0;font-size:.9rem;letter-spacing:.04em}
+.menu a{color:var(--suave);text-decoration:none}
+.menu a:hover{color:var(--ametista-escura)}
+.linguas{display:flex;gap:.15rem;font-size:.78rem;letter-spacing:.08em}
+.linguas a,.linguas span{padding:.25rem .45rem;border-radius:999px;text-decoration:none;color:var(--suave)}
+.linguas [aria-current]{background:var(--ametista-nevoa);color:var(--ametista-escura);font-weight:600}
+
+/* Abertura */
+.abertura{position:relative;overflow:hidden;padding:3.5rem 0 4.5rem}
+.facetas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;color:var(--prata-clara);opacity:.55}
+.abertura .envolve{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:3.5rem;align-items:center}
+.selo{font-family:var(--titulo);letter-spacing:.32em;text-transform:uppercase;font-size:.8rem;color:var(--verde);margin:0 0 1.2rem}
+.abertura h1{font-family:var(--titulo);font-weight:400;font-size:clamp(2.3rem,5.2vw,3.9rem);line-height:1.08;letter-spacing:.01em;margin:0 0 1.4rem;color:var(--tinta)}
+.abertura h1 em{font-style:normal;color:var(--ametista)}
+.abertura .lead{font-weight:300;font-size:1.22rem;line-height:1.65;color:var(--suave);max-width:31rem;margin:0 0 2rem}
+.botoes{display:flex;flex-wrap:wrap;gap:.8rem}
+.botao{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.35rem;border-radius:999px;font-size:.95rem;letter-spacing:.03em;text-decoration:none;border:1px solid var(--ametista);color:var(--papel);background:var(--ametista);transition:background .2s,color .2s,border-color .2s}
+.botao:hover{background:var(--ametista-escura);border-color:var(--ametista-escura);color:var(--papel)}
+.botao.leve{background:transparent;color:var(--ametista-escura)}
+.botao.leve:hover{background:var(--ametista-nevoa);color:var(--ametista-escura)}
+
+.palco{position:relative;justify-self:center;width:min(100%,22rem)}
+.moldura{position:relative;aspect-ratio:9/16;border-radius:2rem;overflow:hidden;background:#d9d2c8;box-shadow:0 1px 0 rgba(255,255,255,.7) inset,0 30px 60px -25px rgba(74,52,104,.45),0 12px 24px -16px rgba(42,37,48,.35)}
+.moldura video,.moldura img{width:100%;height:100%;object-fit:cover}
+.moldura::after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:0 0 0 1px rgba(255,255,255,.35) inset;pointer-events:none}
+.repetir{position:absolute;right:.8rem;bottom:.8rem;display:flex;align-items:center;gap:.35rem;padding:.45rem .8rem;border:0;border-radius:999px;background:rgba(42,37,48,.55);color:#fff;font:inherit;font-size:.78rem;letter-spacing:.04em;cursor:pointer;opacity:0;transform:translateY(4px);transition:opacity .4s,transform .4s;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.repetir.ver{opacity:1;transform:none}
+.repetir:hover{background:rgba(91,67,128,.8)}
+.legenda{margin:.7rem 0 0;text-align:center;font-size:.75rem;color:var(--suave);letter-spacing:.03em}
+
+/* Divisória de cristal */
+.cristal{display:flex;align-items:center;gap:1rem;color:var(--prata-clara);margin:0 auto;max-width:var(--largura);padding:0 1.25rem}
+.cristal::before,.cristal::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--prata-clara))}
+.cristal::after{background:linear-gradient(90deg,var(--prata-clara),transparent)}
+.cristal svg{width:1.5rem;height:auto;flex:none}
+
+/* Secções */
+.seccao{padding:5rem 0}
+.seccao h2{font-family:var(--titulo);font-weight:400;font-size:clamp(1.7rem,3.4vw,2.4rem);line-height:1.2;margin:0 0 1.3rem}
+.rotulo{font-family:var(--titulo);text-transform:uppercase;letter-spacing:.3em;font-size:.74rem;color:var(--verde);margin:0 0 .9rem}
+.seccao p{margin:0 0 1.1rem;max-width:38rem}
+
+.sobre .envolve{display:grid;grid-template-columns:.8fr 1.2fr;gap:4rem;align-items:center}
+.sobre figure{margin:0;justify-self:center;width:min(100%,17rem)}
+.cores{list-style:none;margin:2rem 0 0;padding:0;display:grid;gap:1rem}
+.cores li{display:grid;grid-template-columns:auto 1fr;gap:1rem;align-items:start}
+.cor{width:2.4rem;height:2.4rem;clip-path:polygon(50% 0,100% 30%,100% 70%,50% 100%,0 70%,0 30%);flex:none;margin-top:.15rem}
+.cor.am{background:linear-gradient(150deg,#a68bc6,var(--ametista) 55%,#4f3a72)}
+.cor.vd{background:linear-gradient(150deg,var(--verde-claro),var(--verde) 60%,#284d31)}
+.cor.pr{background:linear-gradient(150deg,#e4e6e9,var(--prata) 60%,#454a51)}
+.cores strong{display:block;font-family:var(--titulo);font-weight:400;font-size:1.1rem;letter-spacing:.04em}
+.cores span{color:var(--suave);font-size:.98rem}
+
+.projetos{background:var(--papel)}
+.cartao{display:grid;grid-template-columns:auto 1fr auto;gap:2rem;align-items:center;padding:2rem 2.2rem;border:1px solid var(--linha);border-radius:1.5rem;background:linear-gradient(135deg,#fff 60%,var(--ametista-nevoa));margin-top:2rem}
+.cartao .inicial{width:4.5rem;height:4.5rem;border-radius:50%;display:grid;place-items:center;background:var(--fundo);border:1px solid var(--linha);font-family:var(--titulo);font-size:1.5rem;color:var(--ametista)}
+.cartao h3{font-family:var(--titulo);font-weight:400;font-size:1.5rem;margin:0 0 .3rem}
+.cartao p{margin:0;color:var(--suave)}
+.cartao .papel{font-size:.82rem;letter-spacing:.06em;color:var(--verde);text-transform:uppercase;margin:0 0 .4rem}
+
+.ideias .envolve{text-align:center}
+.ideias p{margin-left:auto;margin-right:auto}
+.ideias .frase{font-family:var(--titulo);font-size:clamp(1.35rem,2.6vw,1.75rem);line-height:1.45;color:var(--tinta);max-width:34rem}
+.broto{width:3rem;margin:0 auto 1.5rem;color:var(--verde)}
+
+.contato{background:linear-gradient(180deg,var(--fundo),var(--ametista-nevoa))}
+.contato .envolve{text-align:center}
+.contato p{margin-left:auto;margin-right:auto}
+.email{display:inline-block;margin-top:.6rem;font-family:var(--titulo);font-size:clamp(1.15rem,3.2vw,1.6rem);letter-spacing:.03em;word-break:break-all}
+
+/* Rodapé */
+.rodape{padding:2.5rem 0 3rem;font-size:.85rem;color:var(--suave);border-top:1px solid var(--linha)}
+.rodape .envolve{display:flex;flex-wrap:wrap;gap:.6rem 1.6rem;align-items:center}
+.rodape .ia{margin-right:auto}
+.rodape a{color:var(--suave)}
+
+/* Páginas legais */
+.legal{padding:3.5rem 0 4rem}
+.legal .envolve{max-width:46rem}
+.legal h1{font-family:var(--titulo);font-weight:400;font-size:2.1rem;margin:0 0 1.5rem}
+.legal h2{font-family:var(--titulo);font-weight:400;font-size:1.25rem;margin:2rem 0 .6rem}
+.legal p{margin:0 0 1rem}
+
+/* Faixa de prévia (sai antes de publicar) */
+.previa{position:fixed;left:50%;bottom:1rem;transform:translateX(-50%);z-index:20;background:var(--tinta);color:#fff;font-size:.75rem;letter-spacing:.04em;padding:.45rem .9rem;border-radius:999px;box-shadow:0 8px 20px -8px rgba(0,0,0,.4);white-space:nowrap}
+
+/* Entrada suave */
+.surge{opacity:0;transform:translateY(14px);transition:opacity .8s ease,transform .8s ease}
+.surge.visivel{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.surge{opacity:1;transform:none;transition:none}}
+
+/* Tablet e celular */
+@media (max-width:860px){
+  .menu{display:none}
+  .abertura{padding:2rem 0 3.5rem}
+  .abertura .envolve{grid-template-columns:1fr;gap:2.5rem}
+  .abertura .texto{order:2}
+  .palco{order:1;width:min(60%,15rem)}
+  .abertura .selo{display:none}
+  .sobre .envolve{grid-template-columns:1fr;gap:2.5rem}
+  .sobre figure{width:min(60%,13rem)}
+  .seccao{padding:3.8rem 0}
+  .cartao{grid-template-columns:1fr;gap:1.2rem;padding:1.6rem}
+  .cartao .inicial{width:3.5rem;height:3.5rem;font-size:1.2rem}
+  .cartao .botao{justify-self:start}
+}
+@media (max-width:420px){
+  .nome{font-size:.8rem;letter-spacing:.16em}
+  .marca img{width:1.6rem}
+  .topo .envolve{gap:.6rem}
+  .linguas a,.linguas span{padding:.2rem .35rem}
+}
+
+/* Trama de cristal: rede e estrutura molecular, nos cantos das secções */
+.seccao,.rodape{position:relative;overflow:hidden}
+.seccao > .envolve{position:relative;z-index:1}
+.seccao::before{content:"";position:absolute;width:min(44vw,600px);aspect-ratio:600/420;background-repeat:no-repeat;background-size:contain;pointer-events:none;z-index:0;opacity:.75}
+.sobre::before{left:0;bottom:0;background-image:url(../img/trama-inf-esq.svg)}
+.projetos::before{right:0;top:0;background-image:url(../img/trama-sup-dir.svg)}
+.ideias::before{left:0;top:0;background-image:url(../img/trama-sup-esq.svg)}
+.contato::before{right:0;bottom:0;background-image:url(../img/trama-inf-dir.svg)}
+@media (max-width:860px){
+  .seccao::before{width:78vw;opacity:.6}
+  .facetas{opacity:.4}
+}
+.cartao .ouvir{margin-top:.8rem;display:flex;flex-wrap:wrap;gap:.35rem .5rem;align-items:center;font-size:.85rem}
+.cartao .ouvir span{color:var(--suave);letter-spacing:.04em;margin-right:.15rem}
+.cartao .ouvir a{padding:.2rem .65rem;border:1px solid var(--linha);border-radius:999px;background:var(--papel);text-decoration:none;color:var(--ametista-escura)}
+.cartao .ouvir a:hover{border-color:var(--verde);color:var(--verde)}
