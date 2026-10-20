@@ -171,3 +171,12 @@ a:hover{color:var(--verde)}
 .cartao .ouvir span{color:var(--suave);letter-spacing:.04em;margin-right:.15rem}
 .cartao .ouvir a{padding:.2rem .65rem;border:1px solid var(--linha);border-radius:999px;background:var(--papel);text-decoration:none;color:var(--ametista-escura)}
 .cartao .ouvir a:hover{border-color:var(--verde);color:var(--verde)}
+
+/* Primeira produção (clipe) dentro do cartão da Babi Noli */
+.cartao > .botao{grid-row:1;grid-column:3}
+.cartao .producao{grid-row:2;grid-column:2 / -1;display:grid;grid-template-columns:9.5rem 1fr;gap:1rem;align-items:center;margin-top:-.4rem;padding:.75rem;border:1px solid var(--linha);border-radius:1rem;background:var(--papel);text-decoration:none;color:var(--tinta);transition:border-color .2s}
+.cartao .producao:hover{border-color:var(--ametista)}
+.cartao .producao img{width:100%;height:auto;border-radius:.6rem}
+.cartao .producao-texto{font-size:.92rem;line-height:1.45}
+.cartao .producao-link{display:block;margin-top:.35rem;font-size:.85rem;color:var(--ametista-escura)}
+@media (max-width:860px){.cartao > .botao{grid-row:auto;grid-column:auto}.cartao .producao{grid-row:auto;grid-column:1;grid-template-columns:1fr;margin-top:0}}
