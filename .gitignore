@@ -3,3 +3,5 @@ previa/
 *.procreate
 *.clip
 originais/
+.wrangler
+node_modules
