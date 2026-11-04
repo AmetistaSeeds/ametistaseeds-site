@@ -1,5 +1,5 @@
 {
-  // Site Ametista Seeds — Cloudflare Workers + Static Assets (mesmo padrão do Tudukit)
+  // Site Ametista Seeds — Cloudflare Workers + Static Assets (mesmo padrão do Tudukit)  (ligado ao Workers Builds em 04/11/2026)
   "name": "ametistaseeds-site",
   "main": "src/worker.js",
   "compatibility_date": "2026-11-04",
