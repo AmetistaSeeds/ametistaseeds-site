@@ -180,3 +180,4 @@ a:hover{color:var(--verde)}
 .cartao .producao-texto{font-size:.92rem;line-height:1.45}
 .cartao .producao-link{display:block;margin-top:.35rem;font-size:.85rem;color:var(--ametista-escura)}
 @media (max-width:860px){.cartao > .botao{grid-row:auto;grid-column:auto}.cartao .producao{grid-row:auto;grid-column:1;grid-template-columns:1fr;margin-top:0}}
+.cartao .inicial.flor img{width:2.9rem;height:2.9rem;display:block}
