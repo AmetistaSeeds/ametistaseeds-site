@@ -18,5 +18,6 @@
   document.addEventListener("click", function (e) {
     var a = e.target && e.target.closest && e.target.closest("a[href]");
     if (a && /spotify\.com|music\.apple\.com|music\.youtube\.com|music\.amazon\.|deezer\.com|tidal\.com|distrokid\.com/.test(a.href)) send("/api/ev", { p: location.pathname, e: "clique-streaming" });
+    if (a && /^https:\/\/wa\.me\//.test(a.href)) send("/api/ev", { p: location.pathname, e: "clique-whatsapp" });
   }, true);
 })();

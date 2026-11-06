@@ -183,3 +183,8 @@ a:hover{color:var(--verde)}
 .cartao .inicial.flor img{width:2.9rem;height:2.9rem;display:block}
 .cartao .inicial.chip img{width:4rem;height:4rem}
 @media (max-width:860px){.cartao .inicial.chip img{width:3.1rem;height:3.1rem}}
+
+/* WhatsApp (contato) */
+.whatsapp-linha{margin-top:1.2rem}
+.botao.whatsapp{background:#25D366;color:#073b1f;border-color:#25D366}
+.botao.whatsapp:hover{filter:brightness(.95)}
